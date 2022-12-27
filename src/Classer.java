@@ -14,8 +14,10 @@ public class Classer extends JFrame {
     private JPanel marginesR;
     private JPanel marginesB;
     private JPanel marginesL;
+    private JTextField textField6;
 
     public static void main(String[] args) {
+
         Classer aplikacja = new Classer();
         aplikacja.setVisible(true);
     }
