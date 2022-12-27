@@ -1,21 +1,16 @@
 public class Student {
-    String imie, nazwisko, wiek, przedmiot, kwota, telefon;
+    String imie, wiek, przedmiot, kwota, telefon, email;
 
-    public Student(String imie, String nazwisko, String wiek, String przedmiot, String kwota, String telefon) {
+    public Student(String imie, String wiek, String przedmiot, String kwota, String telefon, String email) {
         this.imie = imie;
-        this.nazwisko = nazwisko;
         this.wiek = wiek;
         this.przedmiot = przedmiot;
         this.kwota = kwota;
         this.telefon = telefon;
+        this.email = email;
     }
-    Student p1 = new Student("Karolina","Myka","18","Angielski","80 zł","2123");
-    Student p2 = new Student("Jan","Kowalski","16"," Angielski ","65 zł","2312");
-    Student p3 = new Student("Karol","Wielki","15","Matematyka" ,"100 zł","5122");
-    Student p4 = new Student("Krzysztof","Fraja","12","Matematyka","50 zł","1387");
 
-    public Student(){}
-
+    public Student() {}
 
     public String getImie() {
         return imie;
@@ -23,14 +18,6 @@ public class Student {
 
     public void setImie(String imie) {
         this.imie = imie;
-    }
-
-    public String getNazwisko() {
-        return nazwisko;
-    }
-
-    public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
     }
 
     public String getWiek() {
@@ -61,11 +48,15 @@ public class Student {
         return telefon;
     }
 
-    public void setEmail(String telefon) {
+    public void setTelefon(String telefon) {
         this.telefon = telefon;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
-
-
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
