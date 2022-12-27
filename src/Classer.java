@@ -1,6 +1,8 @@
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class Classer extends JFrame {
@@ -64,6 +66,14 @@ public class Classer extends JFrame {
                     list1.validate();
                     list1.repaint();
                 }
+            }
+        });
+        btnDodaj.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GUI2Form oknoDodawania = new GUI2Form();
+                oknoDodawania.setVisible(true);
+
             }
         });
     }
