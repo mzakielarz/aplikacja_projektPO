@@ -58,7 +58,7 @@ public class Classer extends JFrame {
                     txtPrzedmiot.setText(database.get(index).getPrzedmiot());
                     txtWiek.setText(database.get(index).getWiek());
                 }
-                //bez tych opcji wywala błąd
+
                 catch (IndexOutOfBoundsException indexException){
                     list1.invalidate();
                     list1.validate();
