@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Classer extends JFrame {
     private JPanel JPanel1;
-    private JList list1;
+    private JList<String> list1;
     private JButton btnDodaj;
     private JButton btnUsun;
     private JButton btnEdytuj;
@@ -27,7 +27,7 @@ public class Classer extends JFrame {
         Classer aplikacja = new Classer();
         aplikacja.setVisible(true);
 
-        Student p1 = new Student("Krzysztof Fraja","12","Matematyka","50","1387 zł","kfraja@gmail.com");
+        Student p1 = new Student("Krzysztof Fraja","12","Matematyka","50 zł","1387 ","kfraja@gmail.com");
         Student p2 = new Student("Jan Kowalski","16","Angielski"," 65 zł ","2312","jkowal@gmail.com");
         Student p3 = new Student("Karol Wielki","15","Matematyka","100 zł" ,"5122","kwielki@gmail.com");
         Student p4 = new Student("Karolina Myka","18","Angielski","80 zł","2123","kmyka@gmail.com");
@@ -41,7 +41,13 @@ public class Classer extends JFrame {
        demoList.addElement(p3.getImie());
        demoList.addElement(p4.getImie());
 
+
     }
+
+    public static DefaultListModel getDemoList() {
+        return demoList;
+    }
+
     public Classer(){
         super("APP");
         this.setContentPane(this.JPanel1);
@@ -76,5 +82,6 @@ public class Classer extends JFrame {
 
             }
         });
+
     }
 }
