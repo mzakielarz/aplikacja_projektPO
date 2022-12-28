@@ -53,6 +53,7 @@ public class Classer extends JFrame {
         this.setContentPane(this.JPanel1);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(700,350);
+        list1.setModel(demoList);
 
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
