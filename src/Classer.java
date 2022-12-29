@@ -55,8 +55,6 @@ public class Classer extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(700,350);
         list1.setModel(demoList);
-        
-
 
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
@@ -94,7 +92,6 @@ public class Classer extends JFrame {
 
                 EdytujForm app = new EdytujForm();
                 app.setVisible(true);
-                btnEdytuj.setEnabled(false);
 
             }
         });
