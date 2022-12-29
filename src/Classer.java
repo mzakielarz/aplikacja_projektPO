@@ -44,6 +44,14 @@ public class Classer extends JFrame {
 
     }
 
+    public static int getIndex() {
+        return index;
+    }
+
+    public  JList<String> getList1() {
+        return list1;
+    }
+
     public static DefaultListModel getDemoList() {
         return demoList;
     }
@@ -88,11 +96,22 @@ public class Classer extends JFrame {
         btnEdytuj.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-// proba zrobienia edycji
 
                 EdytujForm app = new EdytujForm();
                 app.setVisible(true);
 
+            }
+        });
+        btnUsun.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int selectedIndex = list1.getSelectedIndex();
+                if (selectedIndex != -1) {
+
+                    demoList.remove(selectedIndex);
+                    database.remove(selectedIndex);
+                    list1.repaint();
+                }
             }
         });
     }

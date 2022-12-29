@@ -46,6 +46,25 @@ public class EdytujForm extends JFrame {
 
             }
         });
+        btnZatwierdzZmiany.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //pobranie danej zaznaczonej pozycji
+                int selectedItem =  Classer.getIndex();
+                Student p = new Student();
+                p.setImie(txtName3.getText());
+                p.setTelefon((txtTelefon3.getText()));
+                p.setWiek((txtWiek3.getText()));
+                p.setPrzedmiot((txtPrzedmiot3.getText()));
+                p.setKwota(txtKwota3.getText());
+
+                Classer.database.set(selectedItem,p);
+                Classer.getDemoList().set(selectedItem,p.getImie());
+
+
+                dispose();
+            }
+        });
     }
 
 
