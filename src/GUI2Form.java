@@ -49,6 +49,7 @@ public class GUI2Form extends JFrame  {
                 txtPrzedmiotGUI2.setText("");
                 txtKwotaGUI2.setText("");
                 Classer.getDemoList().addElement(p.getImie());
+                dispose();
             }
         });
     }

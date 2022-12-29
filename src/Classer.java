@@ -22,6 +22,7 @@ public class Classer extends JFrame {
     private JTextField txtemail;
     public static ArrayList<Student> database = new ArrayList<>();
     public static DefaultListModel demoList = new DefaultListModel();
+    public static int index ;
 
     public static void main(String[] args) {
         Classer aplikacja = new Classer();
@@ -47,18 +48,21 @@ public class Classer extends JFrame {
         return demoList;
     }
 
+
     public Classer(){
         super("APP");
         this.setContentPane(this.JPanel1);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(700,350);
         list1.setModel(demoList);
+        
+
 
         list1.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 try{
-                    int index = list1.getSelectedIndex();
+                     index = list1.getSelectedIndex();
                     txtName.setText(database.get(index).getImie());
                     txtemail.setText(database.get(index).getEmail());
                     txtTelefon.setText(database.get(index).getTelefon());
@@ -86,10 +90,11 @@ public class Classer extends JFrame {
         btnEdytuj.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+// proba zrobienia edycji
+
                 EdytujForm app = new EdytujForm();
                 app.setVisible(true);
-
-
+                btnEdytuj.setEnabled(false);
 
             }
         });

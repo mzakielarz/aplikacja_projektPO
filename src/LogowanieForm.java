@@ -48,7 +48,8 @@ public class LogowanieForm extends JFrame {
                     JOptionPane.showMessageDialog(LogowanieForm.this, "Złe hasło");
                 else if (!login.equals("login") && haslo.equals(truehaslo))
                     JOptionPane.showMessageDialog(LogowanieForm.this, "Zły login");
-
+                else if(!login.equals("login")&& !haslo.equals(truehaslo))
+                    JOptionPane.showMessageDialog(LogowanieForm.this, "Brak konta o takich danych");
             }
         });
     }
