@@ -57,6 +57,7 @@ public class EdytujForm extends JFrame {
                 p.setWiek((txtWiek3.getText()));
                 p.setPrzedmiot((txtPrzedmiot3.getText()));
                 p.setKwota(txtKwota3.getText());
+                p.setEmail(txtEmail3.getText());
 
                 Classer.database.set(selectedItem,p);
                 Classer.getDemoList().set(selectedItem,p.getImie());

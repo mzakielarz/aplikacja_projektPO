@@ -68,7 +68,7 @@ public class Classer extends JFrame {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 try{
-                     index = list1.getSelectedIndex();
+                    index = list1.getSelectedIndex();
                     txtName.setText(database.get(index).getImie());
                     txtemail.setText(database.get(index).getEmail());
                     txtTelefon.setText(database.get(index).getTelefon());
