@@ -24,6 +24,15 @@ public class Classer extends JFrame {
     public static DefaultListModel demoList = new DefaultListModel();
     public static int index ;
 
+    public void clearBox(){
+        txtName.setText(" ");
+        txtWiek.setText(" ");
+        txtPrzedmiot.setText(" ");
+        txtKwota.setText(" ");
+        txtTelefon.setText(" ");
+        txtemail.setText(" ");
+    }
+
     public static void main(String[] args) {
         Classer aplikacja = new Classer();
         aplikacja.setVisible(true);
@@ -111,6 +120,7 @@ public class Classer extends JFrame {
                     demoList.remove(selectedIndex);
                     database.remove(selectedIndex);
                     list1.repaint();
+                    clearBox();
                 }
             }
         });
