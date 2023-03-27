@@ -1,2 +1,2 @@
 # aplikacja_projektPO
-pełna_wersja
+pełna_wersja.
